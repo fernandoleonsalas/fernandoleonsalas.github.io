@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    background-color: #f5eaea;
+}
+
+nav{
+    background-color: rgb(105, 17, 17);
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow:  4px 4px 3px #00000088;
+    padding: 1rem;
+}
+
+.activo_nav{
+    background-color: orange;
+}
+
+nav button{
+     background: #343D5B;
+     border-radius: 2rem;
+     width: 5rem;
+     height: 2rem;
+     cursor: pointer;
+     outline: none;
+     border: none;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     border: .05rem solid #000000;
+}
+
+nav button::after{
+    content: "";
+    background: #f5eaea;
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    transition: 1s ease all;
+    border: .05rem solid gray;
+}
+
+nav .activo{
+    background-color: #ffffff;
+}
+
+nav .activo::after{
+    left: unset;    /*EL unset*/
+    right: 0;
+}
+
+nav button span{
+    background-color: none;
+    width: 5rem;
+    color: #ffffff;
+}
+  
+.fondo_oscuro{
+    background-color: #343D5B;
+}
+
+.span_activo{
+    color: #ffa500;
+}
+
+
+
+.nav_activo{
+    background-color:gray;
+}
+
+
+
+
+
