@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(236, 226, 226);
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .logotipo{
+    padding: 1rem;
+    border: .2rem solid #1a1a1a;
+    color: #1a1a1a;
+    overflow: hidden; /*lo que hace es que cuando un elemento esta dentro del contenedor luego se posicione fuera se desaparesca */
+}
+
+main .logotipo .subtitulo{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    user-select: none;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    padding: .5rem 1rem;
+    transition: .5s ease all;
+}
+
+main .logotipo .subtitulo:hover{
+    background-color: #2e5fff;
+}
+
+main .texto_animado{
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /*lo que hace es que cuando un elemento esta dentro del contenedor luego se posicione fuera se desaparesca */
+}
+
+.texto_animado div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: .3s ease all;
+}
+
+.texto_animado .animacion{
+    transform: translateY(-100px);
+}
+
+
+.texto_animado div span {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.segunda_linea{
+    position: absolute;
+    top: 6rem;
+}
+
+@media screen and (max-width:600px) {
+    body{
+        background-color: #000000;
+    }
+
+    main .logotipo{
+     color: #f2f2f2;
+     border: .2rem solid #f2f2f2;
+    }
+    
+    main .logotipo .subtitulo{
+        font-size: 1rem;
+        background-color: #f2f2f2;
+        color: #1a1a1a;
+    }
+    main .logotipo .subtitulo:hover{
+        color: #f2f2f2;
+    }
+
+    .texto_animado div span{
+        font-size:2.5rem;
+    }
+
+    .texto_animado div .primera_linea{
+        color: #f2f2f2;
+    }
+
+    .texto_animado div:nth-child(1), 
+    .texto_animado div:nth-child(3), 
+    .texto_animado div:nth-child(5),
+    .texto_animado div:nth-child(7),
+    .texto_animado div:nth-child(10),
+    .texto_animado div:nth-child(12){
+        color:#2e5fff;
+    }
+
+
+}
